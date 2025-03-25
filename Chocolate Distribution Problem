@@ -1,0 +1,17 @@
+
+class Solution {
+    public int findMinDiff(ArrayList<Integer> array, int m) {
+        Collections.sort(array);
+       int minDiff = Integer.MAX_VALUE;
+       int i=0;
+       while(m<=array.size()){
+           int temp=array.get(m-1)-array.get(i);
+           if(minDiff>temp){
+               minDiff=temp;
+           }
+           m++;
+           i++;
+       }
+       return minDiff;
+    }
+} 
